@@ -1,7 +1,7 @@
-package org.jboss.as.console.client.extension.gin;
+package org.jboss.as.console.client.module1.gin;
 
 import com.google.gwt.inject.client.AsyncProvider;
-import org.jboss.as.console.client.extension.HelloWorldPresenter;
+import org.jboss.as.console.client.module1.HelloWorldPresenter;
 import org.jboss.as.console.spi.GinExtension;
 
 /**

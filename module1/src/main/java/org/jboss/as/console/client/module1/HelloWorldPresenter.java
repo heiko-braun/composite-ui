@@ -1,4 +1,4 @@
-package org.jboss.as.console.client.extension;
+package org.jboss.as.console.client.module1;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.inject.Inject;
@@ -9,9 +9,7 @@ import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
 import com.gwtplatform.mvp.client.proxy.Place;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.Proxy;
-import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
-import org.jboss.as.console.client.core.MainLayoutPresenter;
-import org.jboss.as.console.client.extension.model.DataModel;
+import org.jboss.as.console.client.module1.model.DataModel;
 import org.jboss.as.console.client.shared.BeanFactory;
 import org.jboss.as.console.client.shared.subsys.RevealStrategy;
 import org.jboss.as.console.spi.Subsystem;
@@ -27,8 +25,8 @@ public class HelloWorldPresenter extends Presenter<HelloWorldPresenter.MyView, H
     private RevealStrategy revealStrategy;
 
     @ProxyCodeSplit
-    @NameToken("helloworld")
-    @Subsystem(name="HelloWorld", group = "Examples", key="logging")
+    @NameToken("module1")
+    @Subsystem(name="Module1 UI", group = "Extensions", key="logging")  // fake key, otheriwse it would not be loaded
     public interface MyProxy extends Proxy<HelloWorldPresenter>, Place {
     }
 
