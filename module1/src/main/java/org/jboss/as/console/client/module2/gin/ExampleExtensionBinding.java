@@ -1,8 +1,8 @@
-package org.jboss.as.console.client.module1.gin;
+package org.jboss.as.console.client.module2.gin;
 
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
-import org.jboss.as.console.client.module1.HelloWorldPresenter;
-import org.jboss.as.console.client.module1.HelloWorldView;
+import org.jboss.as.console.client.module2.HelloWorldPresenter;
+import org.jboss.as.console.client.module2.HelloWorldView;
 import org.jboss.as.console.spi.GinExtensionBinding;
 
 /**

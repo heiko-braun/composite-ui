@@ -1,4 +1,4 @@
-package org.jboss.as.console.client.module1.model;
+package org.jboss.as.console.client.module2.model;
 
 import com.google.gwt.autobean.shared.AutoBean;
 import org.jboss.as.console.spi.BeanFactoryExtension;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <name>Module 1</name>
+    <name>Composite</name>
     <groupId>org.jboss.as.example</groupId>
-    <artifactId>module1</artifactId>
+    <artifactId>final-application</artifactId>
     <packaging>war</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -28,6 +28,25 @@
     </dependencyManagement>
 
     <dependencies>
+
+
+        <!-- extension declarations for this composite -->
+
+        <dependency>
+            <groupId>org.jboss.as.example</groupId>
+            <artifactId>module1</artifactId>
+            <version>${project.version}</version>
+            <classifier>export</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.as.example</groupId>
+            <artifactId>module2</artifactId>
+            <version>${project.version}</version>
+            <classifier>export</classifier>
+        </dependency>
+
+        <!-- regular dependencies -->
 
         <dependency>
             <groupId>org.jboss.as</groupId>
@@ -124,7 +143,7 @@
 
     <!-- Plugins -->
     <build>
-        <finalName>extension-${project.artifactId}</finalName>
+        <finalName>${groupId}_${artifactId}-console</finalName>
         <outputDirectory>war/WEB-INF/classes</outputDirectory>
 
         <resources>
@@ -193,10 +212,10 @@
                 <version>${gwt.maven}</version>
                 <configuration>
                     <inplace>true</inplace>
-                    <logLevel>ERROR</logLevel>
+                    <logLevel>TRACE</logLevel>
                     <runTarget>App.html</runTarget>
                     <warSourceDirectory>war</warSourceDirectory>
-                    <extraJvmArgs>-server -Xmx512m -XX:MaxPermSize=256M</extraJvmArgs>
+                    <extraJvmArgs>-Xmx512m -DDEBUG -XX:MaxPermSize=256M</extraJvmArgs>
                     <servicePattern>**/*Service.java</servicePattern>
                     <style>OBF</style>
                     <hostedWebapp>war</hostedWebapp>
@@ -322,9 +341,8 @@
                         <configuration>
                             <tasks>
                                 <echo>Replace the war file with a fake.war</echo>
-
                                 <zip destfile="./target/fake.war" basedir="src/main/fake_war"/>
-                                <copy file="./target/fake.war" tofile="./target/extension-${project.artifactId}.war" overwrite="true" verbose="true"/>
+                                <copy file="./target/fake.war" tofile="./target/${groupId}_${artifactId}-console.war" overwrite="true" verbose="true"/>
                             </tasks>
                         </configuration>
                         <goals>

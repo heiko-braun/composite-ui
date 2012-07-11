@@ -1,4 +1,4 @@
-package org.jboss.as.console.client.module1.model;
+package org.jboss.as.console.client.module2.model;
 
 /**
  * @author Heiko Braun
