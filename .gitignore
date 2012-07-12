@@ -1,0 +1,11 @@
+target
+application/target
+module1/target
+module2/target
+
+war
+application/war
+module1/war
+module2/war
+
+
