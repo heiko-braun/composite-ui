@@ -12,5 +12,5 @@ import org.jboss.as.console.spi.GinExtension;
 @GinExtension
 public interface ExampleExtension {
 
-    AsyncProvider<HelloWorldPresenter> getHelloWorldPresenter();
+    AsyncProvider<HelloWorldPresenter> getModule1Presenter();
 }
