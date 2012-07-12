@@ -23,7 +23,8 @@ Typically you would work on a module at a time.
 You can easily switch into the module directory and launch the hosted mode:
 
 `cd module2
-mvn gwt:run
+mvn gwt:run`
+
 
 Since it's not a composite module you will only see any UI extension scoped to a particular module.
 But it allows you to rely on the quick turn around times that hosted mode + brwoser refresh give you
