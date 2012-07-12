@@ -338,6 +338,30 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>skip-gwt</id>
+
+            <!--
+               For multi module builds it sometimes advisable to skip the GWT compile per module.
+               It's sufficient on the actual (final) composite application.
+            -->
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>gwt-maven-plugin</artifactId>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                        <executions/>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
+
     <pluginRepositories>
         <pluginRepository>
             <id>gwtplatform.plugin</id>

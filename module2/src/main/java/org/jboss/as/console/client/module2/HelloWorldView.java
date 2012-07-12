@@ -3,7 +3,7 @@ package org.jboss.as.console.client.module2;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 import org.jboss.as.console.client.core.SuspendableViewImpl;
-import org.jboss.as.console.client.module2.model.DataModel;
+import org.jboss.as.console.client.module2.model.Model2;
 import org.jboss.as.console.client.shared.viewframework.builder.SimpleLayout;
 
 /**
@@ -20,7 +20,7 @@ public class HelloWorldView extends SuspendableViewImpl implements HelloWorldPre
     }
 
     @Override
-    public void setData(DataModel data) {
+    public void setData(Model2 data) {
         label.setText(data.getGreeting());
     }
 

@@ -1,4 +1,4 @@
-package org.jboss.as.console.client.module2.model;
+package org.jboss.as.console.client.module1.model;
 
 import com.google.gwt.autobean.shared.AutoBean;
 import org.jboss.as.console.spi.BeanFactoryExtension;
@@ -9,5 +9,5 @@ import org.jboss.as.console.spi.BeanFactoryExtension;
  */
 @BeanFactoryExtension
 public interface DataModelFactory {
-    AutoBean<DataModel> getDataModel();
+    AutoBean<Model1> getModel1();
 }

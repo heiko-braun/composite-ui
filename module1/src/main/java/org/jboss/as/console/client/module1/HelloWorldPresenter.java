@@ -1,4 +1,4 @@
-package org.jboss.as.console.client.module2;
+package org.jboss.as.console.client.module1;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.inject.Inject;
@@ -9,7 +9,7 @@ import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
 import com.gwtplatform.mvp.client.proxy.Place;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.Proxy;
-import org.jboss.as.console.client.module2.model.DataModel;
+import org.jboss.as.console.client.module1.model.Model1;
 import org.jboss.as.console.client.shared.BeanFactory;
 import org.jboss.as.console.client.shared.subsys.RevealStrategy;
 import org.jboss.as.console.spi.Subsystem;
@@ -32,7 +32,7 @@ public class HelloWorldPresenter extends Presenter<HelloWorldPresenter.MyView, H
 
     public interface MyView extends View {
         void setPresenter(HelloWorldPresenter presenter);
-        void setData(DataModel data);
+        void setData(Model1 data);
     }
 
     @Inject
@@ -60,7 +60,7 @@ public class HelloWorldPresenter extends Presenter<HelloWorldPresenter.MyView, H
 
 
         // populate data model, i.e. from remote call
-        DataModel model = factory.getDataModel().as();
+        Model1 model = factory.getModel1().as();
         model.setGreeting("Hello World");
 
         // update view

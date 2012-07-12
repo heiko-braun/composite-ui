@@ -9,5 +9,5 @@ import org.jboss.as.console.spi.BeanFactoryExtension;
  */
 @BeanFactoryExtension
 public interface DataModelFactory {
-    AutoBean<DataModel> getDataModel();
+    AutoBean<Model2> getModel2();
 }
