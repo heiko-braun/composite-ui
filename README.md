@@ -16,6 +16,13 @@ Constraints
   however the final console should not.
 
 
+Some noteworthy gotchas:
+
+- the extensions (bean factory, gin module, etc) are all treated as "mixins" for
+a final class that acts as the main entry point. since this basically means we are building
+an inheritance hierarchy it might happen that extensions collide on method or class names.
+The compiler catches these cases and they are trivial to fix.
+
 Module Development
 ------------------
 
@@ -50,6 +57,7 @@ Deployment
 Currently the console is integrated as an AS7 module. Hence the deployment as war file is not supported.
 You'll notice that the actual target/*.war is basically an emtpy wrapper.  However it needs to exists due to the nature
 of the maven gw plugin (hosted mode), which expects a war project structure.
+
 
 
 
