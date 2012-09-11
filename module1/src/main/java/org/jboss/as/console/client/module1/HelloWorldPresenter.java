@@ -12,7 +12,7 @@ import com.gwtplatform.mvp.client.proxy.Proxy;
 import org.jboss.as.console.client.module1.model.Model1;
 import org.jboss.as.console.client.shared.BeanFactory;
 import org.jboss.as.console.client.shared.subsys.RevealStrategy;
-import org.jboss.as.console.spi.Subsystem;
+import org.jboss.as.console.spi.SubsystemExtension;
 
 /**
  * @author Heiko Braun
@@ -26,7 +26,7 @@ public class HelloWorldPresenter extends Presenter<HelloWorldPresenter.MyView, H
 
     @ProxyCodeSplit
     @NameToken("module1")
-    @Subsystem(name="Module1 UI", group = "Extensions", key="logging")  // fake key, otheriwse it would not be loaded
+    @SubsystemExtension(name="Module1 UI", group = "Extensions", key="logging")  // fake key, otheriwse it would not be loaded
     public interface MyProxy extends Proxy<HelloWorldPresenter>, Place {
     }
 

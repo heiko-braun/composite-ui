@@ -23,7 +23,7 @@
     <name>Parent</name>
     <groupId>org.jboss.as.example</groupId>
     <artifactId>example-console</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>Example Composite Management Console</description>
