@@ -30,9 +30,9 @@ public class HelloWorldView extends SuspendableViewImpl implements HelloWorldPre
         label = new Label();
 
         SimpleLayout layout = new SimpleLayout()
-                .setTitle("Extension Example")
+                .setTitle("Module 2")
                 .setHeadlineWidget(label)
-                .setDescription("A simple extension example that shows the most important coding patterns.");
+                .setDescription("Hello, I am module 2!");
 
         return layout.build();
     }

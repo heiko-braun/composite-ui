@@ -9,7 +9,7 @@ import org.jboss.as.console.spi.GinExtension;
  * @date 3/29/12
  */
 
-@GinExtension
+@GinExtension ("org.jboss.as.console.FooBar2")
 public interface ExampleExtension {
 
     AsyncProvider<HelloWorldPresenter> getModule2Presenter();
