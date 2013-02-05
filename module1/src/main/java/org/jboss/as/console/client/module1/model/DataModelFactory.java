@@ -1,7 +1,7 @@
 package org.jboss.as.console.client.module1.model;
 
-import com.google.gwt.autobean.shared.AutoBean;
 import org.jboss.as.console.spi.BeanFactoryExtension;
+import com.google.web.bindery.autobean.shared.AutoBean;
 
 /**
  * @author Heiko Braun

@@ -16,7 +16,6 @@
   ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
   ~ MA  02110-1301, USA.
   -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -25,18 +24,20 @@
     <artifactId>example-console</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
     <description>Example Composite Management Console</description>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
 
     <modules>
         <module>module1</module>
         <module>module2</module>
         <module>application</module>
     </modules>
+
 
     <!-- Repositories -->
     <repositories>
@@ -53,7 +54,6 @@
             </snapshots>
         </repository>
     </repositories>
-
     <pluginRepositories>
         <pluginRepository>
             <id>jboss-public-repository-group</id>
@@ -67,8 +67,8 @@
                 <updatePolicy>never</updatePolicy>
             </snapshots>
         </pluginRepository>
-
     </pluginRepositories>
+
 
     <!-- DistributionManagement -->
     <distributionManagement>
@@ -77,14 +77,11 @@
             <name>JBoss Releases Repository</name>
             <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
         </repository>
-
         <snapshotRepository>
             <id>jboss-snapshots-repository</id>
             <name>JBoss Snapshots Repository</name>
             <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
-
     </distributionManagement>
-
 </project>
 
